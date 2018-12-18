@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Melanie N, Ratie, Joan K" />
+
+
+<title>More Info</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+div.sourceCode {
+  overflow-x: visible;
+}
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Final Project Title</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Blogpost</a>
+</li>
+<li>
+  <a href="more_info.html">More info</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">More Info</h1>
+<h4 class="author"><em>Melanie N, Ratie, Joan K</em></h4>
+<h4 class="date"><em>Last updated on 2018-12-18</em></h4>
+
+</div>
+
+
+<!--
+Comments in HTML are like this! 
+-->
+<div id="section-name" class="section level1">
+<h1>SECTION NAME</h1>
+<p>Write your blog post here.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># load the required libraries</span>
+<span class="kw">library</span>(readr)
+<span class="kw">library</span>(tidyverse)
+<span class="kw">library</span>(ggplot2)
+<span class="kw">library</span>(dplyr)
+<span class="kw">library</span>(leaflet)
+<span class="kw">library</span>(maps)
+<span class="kw">library</span>(sf)
+<span class="co"># import datasets</span>
+headline_responses &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;headline-responses.csv&quot;</span>)
+<span class="co">#View(headline_responses)</span>
+raw_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;raw-data.csv&quot;</span>)
+<span class="co">#View(raw_data)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># select the needed columns</span>
+raw_data0 &lt;-<span class="st"> </span>raw_data <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(ID, HCAL_REGION1_Label_US, HADD_ZipCode_US, HCAL_AGGLO_CODE_US, HCAL_AGGLO_CODE_Label_US,  HCAL_STDREGION_4CODES_Label_US, DP_ETHNICITY_BAN, resp_gender,resp_age,US09KID,CurrentYear, DWD4, DWD5, GRID_DWD9_1_DWD9, GRID_DWD9_5_DWD9, DWD10,DWD1,DWD5)
+<span class="co">#View(raw_data0)</span>
+<span class="co"># join the 2 datasets</span>
+joined_data &lt;-<span class="st"> </span>headline_responses <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">inner_join</span>(raw_data0, <span class="dt">by =</span> <span class="st">&quot;ID&quot;</span>)
+<span class="co">#View(raw_data)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">combined1&lt;-joined_data<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(recalled <span class="op">==</span><span class="st"> &quot;yes&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="co">#rename DWD1 to Political Party</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">political_party=</span><span class="kw">as.factor</span>(DWD1))<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(ID, headline, accuracy_bool, is_fake, HCAL_REGION1_Label_US, resp_age,political_party,DWD5,GRID_DWD9_1_DWD9) <span class="op">%&gt;%</span>
+<span class="st"> </span>
+<span class="st">  </span><span class="co">#Calculate the percentage of wrong responses</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">wrong_or_not =</span> <span class="kw">ifelse</span>(accuracy_bool <span class="op">==</span><span class="st"> </span>is_fake, <span class="dv">1</span>, <span class="dv">0</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(ID) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">wrong_count =</span> <span class="kw">sum</span>(wrong_or_not),
+         <span class="dt">total =</span> <span class="kw">n</span>(),
+         <span class="dt">percentage_wrong =</span> wrong_count<span class="op">/</span>total)<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="co">#determine the different age groups</span>
+<span class="st">    </span><span class="kw">mutate</span>(<span class="dt">age_group=</span> <span class="kw">ifelse</span>(resp_age<span class="op">&gt;</span><span class="st"> </span><span class="dv">91</span>, <span class="st">&quot;GREATEST GENERATION&quot;</span>,
+         <span class="kw">ifelse</span>(resp_age<span class="op">&gt;</span><span class="dv">72</span>, <span class="st">&quot;SILENT GENERATION&quot;</span>,
+         <span class="kw">ifelse</span>(resp_age<span class="op">&gt;</span><span class="dv">53</span>,<span class="st">&quot;BABY BOOMERS&quot;</span>, <span class="kw">ifelse</span>(resp_age<span class="op">&gt;</span><span class="dv">37</span>,<span class="st">&quot;GEN X&quot;</span>,<span class="st">&quot;MILLENNIALS&quot;</span>
+                                        
+         )))))<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="co">#Recode political party values to correspond to party names </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">political_party=</span> <span class="kw">ifelse</span>(political_party<span class="op">==</span><span class="st">&quot;1&quot;</span>, <span class="st">&quot;Democrat&quot;</span>,
+         <span class="kw">ifelse</span>(political_party<span class="op">==</span><span class="st">&quot;2&quot;</span>,<span class="st">&quot;Republican&quot;</span>,
+         <span class="kw">ifelse</span>(political_party<span class="op">==</span><span class="st">&quot;3&quot;</span>,<span class="st">&quot;   Independent&quot;</span>, <span class="st">&quot;Other&quot;</span>))))
+             
+<span class="co">#View(combined1)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#how bias varies generally by political party</span>
+party_count&lt;-combined1<span class="op">%&gt;%</span>
+<span class="kw">group_by</span>(political_party)<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">total =</span> <span class="kw">n</span>())<span class="op">%&gt;%</span>
+<span class="kw">select</span>(political_party, total)
+
+<span class="co">#View(party_count)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">age_count&lt;-combined1<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(age_group)<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">total =</span> <span class="kw">n</span>())<span class="op">%&gt;%</span>
+<span class="kw">select</span>(age_group, total)
+<span class="co">#View(age_count)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Calculate mean wrong responses per age group</span>
+combined_intermediate &lt;-combined1<span class="op">%&gt;%</span>
+
+<span class="kw">group_by</span>(political_party)<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean_wrong=</span><span class="kw">mean</span>(percentage_wrong))
+
+<span class="co">#plot of bias by political party across agegroups</span>
+<span class="kw">ggplot</span>((combined_intermediate), <span class="kw">aes</span>(<span class="dt">x=</span> (political_party), <span class="dt">y=</span>(mean_wrong), <span class="dt">fill=</span><span class="kw">as.factor</span>(political_party))) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_col</span>() <span class="op">+</span>
+<span class="st">  </span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Age group&quot;</span>, <span class="dt">y=</span><span class="st">&quot;Percentage wrong&quot;</span>, 
+       <span class="dt">title =</span> <span class="st">&quot;Bias by Political party affiliatiton&quot;</span>,<span class="dt">fill=</span><span class="st">&quot;Political Party&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">theme_bw</span>()</code></pre></div>
+<p><img src="more_info_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Calculate mean wrong responses per age group</span>
+combined2&lt;-combined1<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(age_group<span class="op">==</span><span class="st">&quot;GREATEST GENERATION&quot;</span>)<span class="op">%&gt;%</span>
+
+<span class="kw">group_by</span>(political_party)<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean_wrong=</span><span class="kw">mean</span>(percentage_wrong))
+<span class="co">#View(combined2)</span>
+combined3&lt;-combined1<span class="op">%&gt;%</span>
+<span class="st">   </span><span class="kw">filter</span>(age_group<span class="op">==</span><span class="st"> &quot;SILENT GENERATION&quot;</span>)<span class="op">%&gt;%</span>
+
+<span class="kw">group_by</span>(political_party)<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean_wrong=</span><span class="kw">mean</span>(percentage_wrong))
+combined4&lt;-combined1<span class="op">%&gt;%</span>
+<span class="st">   </span><span class="kw">filter</span>(age_group<span class="op">==</span><span class="st"> &quot;BABY BOOMERS&quot;</span>)<span class="op">%&gt;%</span>
+
+<span class="kw">group_by</span>(political_party)<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean_wrong=</span><span class="kw">mean</span>(percentage_wrong))
+combined5&lt;-combined1<span class="op">%&gt;%</span>
+<span class="st">   </span><span class="kw">filter</span>(age_group<span class="op">==</span><span class="st"> &quot;GEN X&quot;</span>)<span class="op">%&gt;%</span>
+
+<span class="kw">group_by</span>(political_party)<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean_wrong=</span><span class="kw">mean</span>(percentage_wrong))
+combined6&lt;-combined1<span class="op">%&gt;%</span>
+<span class="st">   </span><span class="kw">filter</span>(age_group<span class="op">==</span><span class="st"> &quot;MILLENNIALS&quot;</span>)<span class="op">%&gt;%</span>
+
+<span class="kw">group_by</span>(political_party)<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean_wrong=</span><span class="kw">mean</span>(percentage_wrong))
+<span class="co">#View(combined6)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#recombine all the datasets together to incorporate mean wrong responses</span>
+<span class="co">#for all age groups</span>
+ combined01&lt;-<span class="kw">full_join</span>(combined2, combined3, <span class="dt">by=</span><span class="ot">NULL</span>) </code></pre></div>
+<pre><code>## Joining, by = c(&quot;ID&quot;, &quot;headline&quot;, &quot;accuracy_bool&quot;, &quot;is_fake&quot;, &quot;HCAL_REGION1_Label_US&quot;, &quot;resp_age&quot;, &quot;political_party&quot;, &quot;DWD5&quot;, &quot;GRID_DWD9_1_DWD9&quot;, &quot;wrong_or_not&quot;, &quot;wrong_count&quot;, &quot;total&quot;, &quot;percentage_wrong&quot;, &quot;age_group&quot;, &quot;mean_wrong&quot;)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">combined02&lt;-<span class="kw">full_join</span>(combined01, combined4, <span class="dt">by=</span><span class="ot">NULL</span>)</code></pre></div>
+<pre><code>## Joining, by = c(&quot;ID&quot;, &quot;headline&quot;, &quot;accuracy_bool&quot;, &quot;is_fake&quot;, &quot;HCAL_REGION1_Label_US&quot;, &quot;resp_age&quot;, &quot;political_party&quot;, &quot;DWD5&quot;, &quot;GRID_DWD9_1_DWD9&quot;, &quot;wrong_or_not&quot;, &quot;wrong_count&quot;, &quot;total&quot;, &quot;percentage_wrong&quot;, &quot;age_group&quot;, &quot;mean_wrong&quot;)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">combined03&lt;-<span class="kw">full_join</span>(combined02, combined5, <span class="dt">by=</span><span class="ot">NULL</span>)</code></pre></div>
+<pre><code>## Joining, by = c(&quot;ID&quot;, &quot;headline&quot;, &quot;accuracy_bool&quot;, &quot;is_fake&quot;, &quot;HCAL_REGION1_Label_US&quot;, &quot;resp_age&quot;, &quot;political_party&quot;, &quot;DWD5&quot;, &quot;GRID_DWD9_1_DWD9&quot;, &quot;wrong_or_not&quot;, &quot;wrong_count&quot;, &quot;total&quot;, &quot;percentage_wrong&quot;, &quot;age_group&quot;, &quot;mean_wrong&quot;)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">combined04&lt;-<span class="kw">full_join</span>(combined03, combined6, <span class="dt">by=</span><span class="ot">NULL</span>)</code></pre></div>
+<pre><code>## Joining, by = c(&quot;ID&quot;, &quot;headline&quot;, &quot;accuracy_bool&quot;, &quot;is_fake&quot;, &quot;HCAL_REGION1_Label_US&quot;, &quot;resp_age&quot;, &quot;political_party&quot;, &quot;DWD5&quot;, &quot;GRID_DWD9_1_DWD9&quot;, &quot;wrong_or_not&quot;, &quot;wrong_count&quot;, &quot;total&quot;, &quot;percentage_wrong&quot;, &quot;age_group&quot;, &quot;mean_wrong&quot;)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#View(combined04)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#So that the age groups are in the order we created them in, and not alphabetical</span>
+combined04<span class="op">$</span>age_group &lt;-<span class="st"> </span><span class="kw">as.character</span>(combined04<span class="op">$</span>age_group)
+<span class="co">#Then turn it back into a factor with the levels in the correct order</span>
+combined04<span class="op">$</span>age_group &lt;-<span class="st"> </span><span class="kw">factor</span>(combined04<span class="op">$</span>age_group, <span class="dt">levels=</span><span class="kw">unique</span>(combined04<span class="op">$</span>age_group))
+<span class="co">#combined04$political_party &lt;- as.character(combined04$political_party)</span>
+<span class="co">#Then turn it back into a factor with the levels in the correct order</span>
+<span class="co">#combined04$political_party &lt;- factor(combined04$political_party, levels=unique(combined04$political_party))</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#plot of bias by political party across agegroups</span>
+<span class="kw">ggplot</span>((combined04), <span class="kw">aes</span>(<span class="dt">x=</span> (age_group), <span class="dt">y=</span>(mean_wrong), <span class="dt">fill=</span><span class="kw">as.factor</span>(political_party))) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_col</span>(<span class="dt">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>age_group, <span class="dt">y=</span>mean_wrong))<span class="op">+</span>
+<span class="st">  </span><span class="co">#points(x = combined04$age_group, y = combined04$generation_wrong)+</span>
+<span class="st">  </span><span class="co">#abline(h=generation_wrong)+</span>
+<span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Age group&quot;</span>, <span class="dt">y=</span><span class="st">&quot;Percentage wrong&quot;</span>, 
+       <span class="dt">title =</span> <span class="st">&quot;Bias by Political party affiliatiton across age groups&quot;</span>,<span class="dt">fill=</span><span class="st">&quot;Political Party&quot;</span>)</code></pre></div>
+<p><img src="more_info_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>ggplot((combined04), aes(x= (age_group), y=(mean_wrong), fill=as.factor(DWD5))) + geom_col( position=“dodge”) + labs(x = “Age group”, y=“Percentage wrong”, title = “Bias by Political party affiliatiton”,fill=“Political Party”)</p>
+<p>```</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Visualizations</span></code></pre></div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
